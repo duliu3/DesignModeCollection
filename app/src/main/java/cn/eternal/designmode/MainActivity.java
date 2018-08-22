@@ -15,6 +15,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import cn.eternal.designmode.mediator.Accountant;
+import cn.eternal.designmode.mediator.HR;
+import cn.eternal.designmode.mediator.Mediator;
+import cn.eternal.designmode.mediator.Productor;
+import cn.eternal.designmode.mediator.StarManager;
+import cn.eternal.designmode.state.DrunkState;
+import cn.eternal.designmode.state.NormalState;
+import cn.eternal.designmode.state.QiaoFeng;
 import cn.eternal.designmode.visitor.CEO;
 import cn.eternal.designmode.visitor.CTO;
 import cn.eternal.designmode.visitor.Engineer;
@@ -31,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        String[] arrays = {"访问者模式", "模板模式", "装饰者模式"};
+        String[] arrays = {"访问者模式", "模板模式", "装饰者模式","状态模式","中介者模式"};
         mDatas = Arrays.asList(arrays);
         ListView list = findViewById(R.id.list);
         ClassifyAdapter classifyAdapter = new ClassifyAdapter();
@@ -47,13 +55,42 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 visit();
                 break;
             case "模板模式":
+
+                break;
+            case "中介者模式":
+                mediator();
                 break;
             case "装饰者模式":
+                break;
+            case "状态模式":
+                stateMode();
                 break;
 
             default:
                 break;
         }
+    }
+
+    private void mediator() {
+        Mediator manager = new StarManager();
+        manager.setAccountant(new Accountant(manager));
+        manager.setHR(new HR(manager));
+        manager.setProductor(new Productor(manager));
+
+        manager.manage();
+    }
+
+    private void stateMode() {
+        QiaoFeng qiaoFeng = new QiaoFeng();
+        qiaoFeng.setState(new NormalState());
+        System.out.println("---乔峰进入普通状态---");
+        qiaoFeng.daGou();
+        qiaoFeng.xiangLong();
+
+        qiaoFeng.setState(new DrunkState());
+        System.out.println("---乔峰进入醉酒状态---");
+        qiaoFeng.daGou();
+        qiaoFeng.xiangLong();
     }
 
     /**
