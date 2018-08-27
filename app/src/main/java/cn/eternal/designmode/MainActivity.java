@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import cn.eternal.designmode.MementoMode.MementoMode;
@@ -20,6 +21,7 @@ import cn.eternal.designmode.observer.ObserverMode;
 import cn.eternal.designmode.proxy.ProxyMode;
 import cn.eternal.designmode.state.StateMode;
 import cn.eternal.designmode.visitor.VisitMode;
+import cn.eternal.libprocessor.Design;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -31,14 +33,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-
-        mDatas.add(new VisitMode());
-        mDatas.add(new StateMode());
-        mDatas.add(new ProxyMode());
-        mDatas.add(new MediatorMode());
-        mDatas.add(new AdapterMode());
-        mDatas.add(new ObserverMode());
-        mDatas.add(new MementoMode());
+        HashSet<DesignMode> designs = new HashSet<>();
+        AnnotationProvider.getDesigns(designs);
+        for (DesignMode design : designs) {
+            mDatas.add(design);
+        }
 
         ListView list = findViewById(R.id.list);
         DesignAdapter classifyAdapter = new DesignAdapter(mDatas);

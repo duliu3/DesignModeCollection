@@ -3,7 +3,7 @@ package cn.eternal.designmode.proxy;
 import java.lang.reflect.Proxy;
 
 import cn.eternal.designmode.DesignMode;
-
+@Design
 public class ProxyMode extends DesignMode {
 
     @Override

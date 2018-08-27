@@ -1,7 +1,9 @@
 package cn.eternal.designmode.mediator;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libprocessor.Design;
 
+@Design
 public class MediatorMode extends DesignMode {
 
     @Override

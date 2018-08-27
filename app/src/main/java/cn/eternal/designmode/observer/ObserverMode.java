@@ -8,6 +8,7 @@ import cn.eternal.designmode.DesignMode;
  * <p><strong>Features draft description.主要功能介绍</strong></p>
  * @since 2018/8/27 17:30
  */
+@Design
 public class ObserverMode extends DesignMode {
 
     @Override

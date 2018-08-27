@@ -1,6 +1,7 @@
 package cn.eternal.designmode.adapter;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libprocessor.Design;
 
 /**
  * @author liudu
@@ -8,6 +9,7 @@ import cn.eternal.designmode.DesignMode;
  * <p><strong>Features draft description.主要功能介绍</strong></p>
  * @since 2018/8/27 16:24
  */
+@Design
 public class AdapterMode extends DesignMode {
     @Override
     public void process() {

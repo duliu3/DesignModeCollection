@@ -1,7 +1,7 @@
 package cn.eternal.designmode.state;
 
 import cn.eternal.designmode.DesignMode;
-
+@Design
 public class StateMode extends DesignMode {
     @Override
     public void process() {
