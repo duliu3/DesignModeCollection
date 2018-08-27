@@ -12,8 +12,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.eternal.designmode.adapter.AdapterMode;
 import cn.eternal.designmode.adapter.MyBaseAdapter;
 import cn.eternal.designmode.mediator.MediatorMode;
+import cn.eternal.designmode.observer.ObserverMode;
 import cn.eternal.designmode.proxy.ProxyMode;
 import cn.eternal.designmode.state.StateMode;
 import cn.eternal.designmode.visitor.VisitMode;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mDatas.add(new StateMode());
         mDatas.add(new ProxyMode());
         mDatas.add(new MediatorMode());
+        mDatas.add(new AdapterMode());
+        mDatas.add(new ObserverMode());
 
         ListView list = findViewById(R.id.list);
         DesignAdapter classifyAdapter = new DesignAdapter(mDatas);

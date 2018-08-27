@@ -3,9 +3,6 @@ package cn.eternal.designmode.adapter;
 import android.util.SparseArray;
 import android.view.View;
 
-/**
- * Created by Administrator on 2018/1/30.
- */
 
 public final class ViewHolder {
 
