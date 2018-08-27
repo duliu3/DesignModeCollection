@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.eternal.designmode.MementoMode.MementoMode;
 import cn.eternal.designmode.adapter.AdapterMode;
 import cn.eternal.designmode.adapter.MyBaseAdapter;
 import cn.eternal.designmode.mediator.MediatorMode;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mDatas.add(new MediatorMode());
         mDatas.add(new AdapterMode());
         mDatas.add(new ObserverMode());
+        mDatas.add(new MementoMode());
 
         ListView list = findViewById(R.id.list);
         DesignAdapter classifyAdapter = new DesignAdapter(mDatas);
