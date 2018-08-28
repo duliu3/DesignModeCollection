@@ -3,6 +3,8 @@ package cn.eternal.designmode.proxy;
 import java.lang.reflect.Proxy;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libannotation.Design;
+
 @Design
 public class ProxyMode extends DesignMode {
 

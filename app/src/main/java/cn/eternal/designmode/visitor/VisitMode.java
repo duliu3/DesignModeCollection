@@ -3,7 +3,7 @@ package cn.eternal.designmode.visitor;
 import java.util.ArrayList;
 
 import cn.eternal.designmode.DesignMode;
-import cn.eternal.libprocessor.Design;
+import cn.eternal.libannotation.Design;
 
 @Design
 public class VisitMode extends DesignMode {

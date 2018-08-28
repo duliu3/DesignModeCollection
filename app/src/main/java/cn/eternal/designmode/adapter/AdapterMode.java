@@ -1,7 +1,7 @@
 package cn.eternal.designmode.adapter;
 
 import cn.eternal.designmode.DesignMode;
-import cn.eternal.libprocessor.Design;
+import cn.eternal.libannotation.Design;
 
 /**
  * @author liudu

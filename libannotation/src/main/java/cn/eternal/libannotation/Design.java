@@ -1,4 +1,4 @@
-package cn.eternal.libprocessor;
+package cn.eternal.libannotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

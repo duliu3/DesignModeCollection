@@ -4,6 +4,8 @@ import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.DeclaredType;
 import javax.lang.model.type.MirroredTypeException;
 
+import cn.eternal.libannotation.Design;
+
 public class DesignAnnotationClass extends AnnotationClass {
 
     // ===========================================================

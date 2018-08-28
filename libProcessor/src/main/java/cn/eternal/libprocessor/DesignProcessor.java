@@ -31,6 +31,8 @@ import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
 
+import cn.eternal.libannotation.Design;
+
 /**
  * @author Administrator
  * @since 2017/2/23 11:21
@@ -60,14 +62,6 @@ public class DesignProcessor extends AbstractProcessor {
         mMessage = processingEnv.getMessager();
     }
 
-    /*@Override
-    public Set<String> getSupportedOptions() {
-        Set<String> set = new HashSet<>();
-//        set.add(Design.class.getCanonicalName());
-//        set.add(AidlWrapper.class.getCanonicalName());
-        return set;
-    }*/
-
     @Override
     public SourceVersion getSupportedSourceVersion() {
         return SourceVersion.latestSupported();
@@ -82,7 +76,7 @@ public class DesignProcessor extends AbstractProcessor {
                 .build();
 
         try {
-            JavaFile.builder("cn.eternal.libprocessor", builderInit)
+            JavaFile.builder("cn.eternal.libannotation", builderInit)
                     .build()
                     .writeTo(mFilter);
         } catch (IOException e) {

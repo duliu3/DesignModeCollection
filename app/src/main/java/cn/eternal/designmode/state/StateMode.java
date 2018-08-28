@@ -1,6 +1,8 @@
 package cn.eternal.designmode.state;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libannotation.Design;
+
 @Design
 public class StateMode extends DesignMode {
     @Override

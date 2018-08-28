@@ -1,6 +1,7 @@
 package cn.eternal.designmode.MementoMode;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libannotation.Design;
 
 /**
  * @author liudu

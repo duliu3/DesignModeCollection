@@ -1,6 +1,7 @@
 package cn.eternal.designmode.observer;
 
 import cn.eternal.designmode.DesignMode;
+import cn.eternal.libannotation.Design;
 
 /**
  * @author liudu

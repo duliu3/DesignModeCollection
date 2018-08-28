@@ -13,15 +13,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import cn.eternal.designmode.MementoMode.MementoMode;
-import cn.eternal.designmode.adapter.AdapterMode;
 import cn.eternal.designmode.adapter.MyBaseAdapter;
-import cn.eternal.designmode.mediator.MediatorMode;
-import cn.eternal.designmode.observer.ObserverMode;
-import cn.eternal.designmode.proxy.ProxyMode;
-import cn.eternal.designmode.state.StateMode;
-import cn.eternal.designmode.visitor.VisitMode;
-import cn.eternal.libprocessor.Design;
+import cn.eternal.libannotation.AnnotationProvider;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
