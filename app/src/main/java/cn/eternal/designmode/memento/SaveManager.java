@@ -1,4 +1,4 @@
-package cn.eternal.designmode.MementoMode;
+package cn.eternal.designmode.memento;
 
 import java.util.HashMap;
 import java.util.Map;

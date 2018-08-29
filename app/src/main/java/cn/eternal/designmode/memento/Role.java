@@ -1,4 +1,4 @@
-package cn.eternal.designmode.MementoMode;
+package cn.eternal.designmode.memento;
 
 /**
  * @author liudu

@@ -1,4 +1,4 @@
-package cn.eternal.designmode.MementoMode;
+package cn.eternal.designmode.memento;
 
 import cn.eternal.designmode.DesignMode;
 import cn.eternal.libannotation.Design;
