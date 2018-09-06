@@ -13,7 +13,7 @@ public class DynamicProxy implements InvocationHandler {
     @Override
     public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
         if ("produceToy".equals(method.getName())) {
-            System.out.println("给玩具贴上山寨标签");
+            System.out.println("随便找个箱子");
         }
         Object invoke = method.invoke(mObj, objects);
         if ("process".equals(method.getName())) {

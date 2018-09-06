@@ -15,6 +15,7 @@ public class ObserverMode extends DesignMode {
     @Override
     public void process() {
         Observer observer = new Observer();
+        //接入层维持网络与分发请求
         NetAccessLayer netAccessLayer = new NetAccessLayer();
         netAccessLayer.addObserver(observer);
         netAccessLayer.sendData(0, "列表数据100个");
