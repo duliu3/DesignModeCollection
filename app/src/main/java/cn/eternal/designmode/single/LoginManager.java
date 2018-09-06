@@ -10,6 +10,6 @@ public enum  LoginManager {
     INS;
 
     public void login() {
-        System.out.println("登录成功");
+        System.out.println("枚举 登录成功");
     }
 }

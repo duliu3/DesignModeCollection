@@ -40,7 +40,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        mDatas.get(i).process();
+        try {
+            mDatas.get(i).process();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
